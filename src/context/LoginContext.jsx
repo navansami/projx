@@ -20,7 +20,7 @@ const LoginReducer = (state, action) => {
 
 export function LoginProvider({ children }) {
     const [state, dispatch] = useReducer(LoginReducer, {
-        token: 1,
+        token: 0,
         email: "",
         password: ""
     })

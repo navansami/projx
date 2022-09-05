@@ -16,7 +16,7 @@ const LoginForm = () => {
         <div className="login-form">
             
             <div className="login-header">
-                <img src={'images/logo/Logo-main.png'} alt="project logo" />
+                <img src={'images/logo/logo-main.png'} alt="project logo" />
             </div>
 
             <div className="login-header-text">

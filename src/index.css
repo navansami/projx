@@ -231,3 +231,148 @@ body {
     color: var(--clr-primary);
     border-bottom: .2rem solid #CF0303;
 }
+
+
+.heroContent {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2rem;
+    justify-content: center;
+    height: 100%;
+}
+
+.heroContent .intro {
+    width: 50%;
+}
+
+.heroContent .intro .motto {
+    font-weight: 700;
+    line-height: 1.8;
+    font-size: .94rem;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+}
+
+.heroContent .intro h1 {
+    font-size: 2.6rem;
+}
+
+.heroContent .intro .intro-info {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    width: 80%;
+    word-wrap: break-word;
+}
+
+.person1 {
+    position: relative;
+    top: 10px;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.person1 .card {
+    position: absolute;
+    top: 0px;
+    border-radius: 1rem;
+    width: 14rem;
+    height: 18rem;
+    background-color: transparent;
+    border: 2px solid var(--clr-primary);
+    z-index: 7;
+}
+
+.person1 img {
+    width: 14rem;
+    height: 18rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+.person2 {
+    position: relative;
+    top: 10px;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 0;
+}
+
+.person2 .card {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    border-radius: 1rem;
+    width: 14rem;
+    height: 18rem;
+    background-color: transparent;
+    border: 2px solid var(--clr-primary);
+    z-index: 1;
+}
+
+.person2 img {
+    width: 14rem;
+    height: 18rem;
+    position: absolute;
+    top: 75px;
+    left: 10px;
+    border-radius: 1rem;
+    z-index: 2;
+}
+
+img.ray1,
+img.ray2  {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+}
+
+img.ray1 {
+    top: -20px;
+    left: 28px;
+}
+
+img.ray2 {
+    top: 0;
+    right: 0;
+}
+
+.social {
+    width: 10%;
+    height: 75%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.social > .red-line {
+    width: 3px;
+    height: 100%;
+    align-self: flex-end;
+    position: absolute;
+    right: 20px;
+    border-right: 1px solid var(--clr-primary);
+}
+
+.social-box {
+    width: 3rem;
+    height: 10rem;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    background-color: #F6F6F6;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}

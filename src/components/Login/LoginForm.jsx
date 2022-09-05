@@ -1,15 +1,19 @@
 import { useState } from 'react';
 
 // Components
+import { useLogin } from '../../hooks/useLogin';
 
 const LoginForm = () => {
     const 
         [ email, setEmail ] = useState(""),
-        [ password, setPassword ] = useState("");
+        [ password, setPassword ] = useState(""),
+        { loginUser } = useLogin();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email, password);
+        loginUser( {email, password}, 
+            "https://challenge.testing-room.com/api/v1/auth/login/" );
+        setEmail(""); setPassword("");
     }
 
     return (

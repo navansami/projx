@@ -193,3 +193,41 @@ body {
     margin-top: 1rem;
     font-weight: 500;
 }
+
+
+
+/* Pages - Home Page
+   =================================================== */
+
+/* Hero Section */
+
+.hero {
+    width: 100%;
+    height: 95vh;
+    padding: 1rem 3rem;
+}
+
+.navbar {
+    padding-block: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-options ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-options ul li {
+    font-family: 600;
+    font-size: 1rem;
+    margin-inline: 1rem;
+}
+
+.menu-options ul li.menu-selected {
+    font-weight: 700;
+    color: var(--clr-primary);
+    border-bottom: .2rem solid #CF0303;
+}

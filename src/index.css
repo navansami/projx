@@ -158,3 +158,38 @@ body {
 .text-noaccount .text-signup {
     text-decoration: underline;
 }
+
+
+/* Login - Split 2 */
+.login-present {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-inline: 6rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--clr-light);
+}
+
+.login-present > img {
+    display: inline-block;
+    width: 75%;
+}
+
+.login-present .login-text {
+    text-align: center;
+}
+
+.login-present .login-text h1 {
+    font-size: 2rem;
+    margin: 0;
+    width: 100%;
+    line-height: 1.2;
+}
+
+.login-present .login-text p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}

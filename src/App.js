@@ -4,12 +4,14 @@ import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 // Components/Hooks
 import { useLogin } from './hooks/useLogin';
 
+
 // Main Pages
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 
 const App = () => {
-  const { token } = useLogin();
+
+  let { token } = useLogin()
   const navigate = useNavigate();
 
   // programatically redirect according to token
@@ -30,14 +32,13 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/login' element={<Login />}  />
-          <Route path={'/signout'} element={
-              <Navigate to={'/'} element={
+          {/* <Route path={'/signout'} element={
+              <Navigate to={'/login'} element={
                   <>{ // Routes serves to "sign out" the user
                       window.localStorage.clear()
                   }</>
-              } />
-                  
-          } />
+              } />   
+          } /> */}
       </Routes>
 
   </div>

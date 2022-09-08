@@ -3,6 +3,9 @@ import { useState } from 'react';
 // Components
 import { useLogin } from '../../hooks/useLogin';
 
+// Styles
+import '../../css/login.css'
+
 const LoginForm = () => {
     const 
         [ email, setEmail ] = useState(""),

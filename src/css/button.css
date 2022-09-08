@@ -1,0 +1,22 @@
+.btn {
+    display: block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-block: 2rem;
+    border-radius: .5rem;
+    padding-block: .85rem;
+    background-color: var(--clr-pri);
+}
+.btn-block { 
+    width: 100%; 
+}
+.btn-rounded {
+    padding: 1.5rem 2.5rem;
+    font-size: .85rem;
+    border-radius: 2rem;
+}
+.btn-primary { 
+    color: #F6F6F6;
+    background-color: var(--clr-pri); 
+}

@@ -1,0 +1,27 @@
+/* Navbar */
+.nav {
+    width: 100vw;
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    font-family: var(--ff-pri);
+    justify-content: space-between;
+  }
+  
+  .nav-options .list {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .nav-options .list .list-options {
+    padding-inline: .5em;
+    font-size: 1.05em;
+    /* font-weight: 300; */
+  }
+  
+  .selected {
+    font-weight: bold;
+    color: var(--clr-pri);
+    border-bottom: .2rem solid var(--clr-pri);
+  }

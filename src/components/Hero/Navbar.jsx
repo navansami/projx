@@ -1,23 +1,27 @@
-
+// Styles
+import '../../css/navbar.css';
 
 const Navbar = () => {
 
+    return(
 
-    return (
-        <nav className="navbar">
-            <div className="branding">
+        <nav className='nav'>
+            
+            <div className="nav-branding">
                 <img src={'images/logo/logo-main.png'} alt="project logo" />
             </div>
-            <div className="menu-options">
-                <ul>
-                    <li className="menu-selected">Home</li>
-                    <li>About Us</li>
-                    <li>Service</li>
-                    <li>Contact</li>
+
+            <div className="nav-options">
+                <ul className="list">
+                    <li className="list-options selected">Home</li>
+                    <li className="list-options">About Us</li>
+                    <li className="list-options">Service</li>
+                    <li className="list-options">Contact</li>
                 </ul>
             </div>
-            <div className="search">
-                <img src={'images/hero/search.png'} alt="search icon" />
+
+            <div className="nav-addons">
+            <img src={'images/hero/search.png'} alt="search icon" />
             </div>
         </nav>
     )

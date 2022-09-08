@@ -1,0 +1,124 @@
+.hero-content_grid {
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    margin-top: 2rem;
+    padding-inline: 3rem;
+    grid-auto-rows: auto;
+    font-family: var(--ff-pri);
+    grid-column: repeat(6, 1fr);
+}
+
+
+/* Hero-Content - Text on Hero */
+.hero-content_text {
+    margin-top: 4rem;
+    grid-column: 1 / span 2;
+}
+.hero-content_text .text-motto {
+    font-weight: 700;
+    font-size: .8rem;
+    color: var(--clr-pri);
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+}
+.hero-content_text .text-title {
+    font-size: 1.45rem;
+}
+.hero-content_text .text-body {
+    width: 30rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+
+/* Hero-Content - Image Cards on Hero */
+.hero-content_cards {
+    display: flex;
+    justify-content: space-around;
+    grid-column: 3 / span 3;
+    grid-row: 1 / span 1;
+}
+.hero-content_cards .cards {
+    display: flex;
+    padding-inline: 1rem;
+    position: relative;
+}
+.cards .cards-main img.person-1 {
+    width: 95%;
+    margin-top: 2.5rem;
+    margin-inline: auto;
+    border-radius: 1rem;
+    position: relative;
+}
+.overlay-1 {
+    width: 85%;
+    height: 63%;
+    margin-top: 2.5rem;
+    margin-inline: auto;
+    border-radius: 1rem;
+    z-index: 10;
+    position: absolute;
+    top: -.95rem;
+    left: -.85rem;
+    border: .2rem solid red;
+}
+.cards .cards-main img.person-2 {
+    width: 95%;
+    margin-top: 4rem;
+    border-radius: 1rem;
+    position: relative;
+}
+.cards .cards-main .overlay-2 {
+    width: 85%;
+    height: 61%;
+    margin-top: 2.5rem;
+    margin-inline: auto;
+    border-radius: 1rem;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    border: .2rem solid red;
+}
+.cards .cards-main .rays {
+    width: 2rem;
+    height: 2rem;
+}
+.cards .cards-main img.rays-1 {
+    position: absolute;
+    top: .5rem;
+    right: 0;
+}
+.cards .cards-main img.rays-2 {
+    position: absolute;
+    bottom: 5rem;
+    left: 10px;
+}
+
+/* Hero-Content - Social Media Icons */
+.hero-content_social {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    grid-column: 6 / span 1;
+}
+.hero-content_social .red-line {
+    width: .1rem;
+    height: 7rem;
+    margin-right: 1rem;
+    padding-block: 2rem;
+    background-color: red;
+}
+.hero-content_social .social-connect {
+    display: flex;
+    margin-left: auto;
+    padding-block: 2rem;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hero-content_social .social-connect img {
+    width: auto;
+    margin-block: .75rem;
+}

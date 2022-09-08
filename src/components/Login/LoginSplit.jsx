@@ -1,4 +1,6 @@
 
+// Styles
+import '../../css/login.css'
 
 const LoginSplit = () => {
 

@@ -1,0 +1,19 @@
+.brand-card {
+    position: absolute;
+    top: 38rem;
+    right: 12rem;
+    width: 70vw;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 4;
+    background-color: #ffffff;
+    justify-content: space-around;
+    box-shadow: .1rem .1rem 2rem rgba(0, 0, 0, .2);
+}
+
+.brand-card img {
+    height: 30%;
+}

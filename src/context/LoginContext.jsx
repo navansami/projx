@@ -43,7 +43,7 @@ export function LoginProvider({ children }) {
         const res = await axios.post(endpoint, user);
         const data = await res;
 
-        if(data) await setItemToLS( data.data.access_token, data.data.refreshtoken )
+        if(data) setItemToLS( data.data.access_token, data.data.refresh_token )
 
         const payload = { data: data.data, email: user.email, password: user.password }
         

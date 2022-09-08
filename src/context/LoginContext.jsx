@@ -32,7 +32,7 @@ export function LoginProvider({ children }) {
     })
 
     // set localstorage asynchronously in loginUser() 
-    const setItemToLS = (access, refresh) => {
+    const setTokensToLS = (access, refresh) => {
         localStorage.setItem("token", JSON.stringify(access));
         localStorage.setItem("refreshtoken", JSON.stringify(refresh));
     }
@@ -43,7 +43,7 @@ export function LoginProvider({ children }) {
         const res = await axios.post(endpoint, user);
         const data = await res;
 
-        if(data) setItemToLS( data.data.access_token, data.data.refresh_token )
+        if(data) setTokensToLS( data.data.access_token, data.data.refresh_token )
 
         const payload = { data: data.data, email: user.email, password: user.password }
         

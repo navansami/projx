@@ -48,7 +48,7 @@
     margin-bottom: .1rem;
 }
 
-.field input[type='text'],
+.field input[type='email'],
 .field input[type='password'] {
     height: 2rem;
     padding: 1rem;

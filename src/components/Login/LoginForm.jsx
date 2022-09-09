@@ -55,9 +55,10 @@ const LoginForm = () => {
                 <div className="field">
                     <label htmlFor="userEmail">Email Address</label>
                     <input 
-                        type="text" 
+                        required 
+                        type="email" 
                         value={email}
-                        id="userEmail" 
+                        id="userEmail"
                         name="userEmail" 
                         autoComplete="off"
                         placeholder="Email Address"
@@ -68,7 +69,8 @@ const LoginForm = () => {
                 {/* Field Two - Password with 'forgot password' option */}
                 <div className="field"> 
                     <label htmlFor="userEmail">Password</label>
-                    <input 
+                    <input
+                        required 
                         type="password" 
                         value={password}
                         id="userPassword" 

@@ -2,7 +2,7 @@
   "name": "projx",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://navansami.github.io",
+  "homepage": "https://navansami.github.io/projx/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <LoginProvider>
-      <Router>
+      <Router basename='/projx'>
         <App />
       </Router>
     </LoginProvider>

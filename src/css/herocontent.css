@@ -46,6 +46,7 @@
 }
 .cards .cards-main img.person-1 {
     width: 95%;
+    height: 65%;
     margin-top: 2.5rem;
     margin-inline: auto;
     border-radius: 1rem;
@@ -53,7 +54,7 @@
 }
 .overlay-1 {
     width: 85%;
-    height: 63%;
+    height: 65%;
     margin-top: 2.5rem;
     margin-inline: auto;
     border-radius: 1rem;
@@ -65,19 +66,20 @@
 }
 .cards .cards-main img.person-2 {
     width: 95%;
+    height: 65%;
     margin-top: 4rem;
     border-radius: 1rem;
     position: relative;
 }
-.cards .cards-main .overlay-2 {
+.overlay-2 {
     width: 85%;
-    height: 61%;
-    margin-top: 2.5rem;
+    height: 65%;
+    margin-top: 1rem;
     margin-inline: auto;
     border-radius: 1rem;
     position: absolute;
     top: 4rem;
-    right: 0;
+    right: 1rem;
     border: .2rem solid red;
 }
 .cards .cards-main .rays {
@@ -91,8 +93,8 @@
 }
 .cards .cards-main img.rays-2 {
     position: absolute;
-    bottom: 5rem;
-    left: 10px;
+    bottom: 6rem;
+    left: -1rem;
 }
 
 /* Hero-Content - Social Media Icons */
@@ -121,4 +123,97 @@
 .hero-content_social .social-connect img {
     width: auto;
     margin-block: .75rem;
+}
+
+
+@media screen and ( max-width: 900px ) {
+
+    .hero-content_grid {
+        max-width: 100vw;
+        grid-column: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+    .hero-content_text      { grid-column: 1 / span 2; grid-row: 1 / span 3; }
+    .hero-content_cards     { grid-column: 1 / span 2; grid-row: 4 / span 4; }
+    .hero-content_social    { grid-column: 1 / span 2; grid-row: 8 / span 1; }
+    .brand-card             { grid-column: 1 / span 2; grid-row: 9 / span 4; }
+
+    .hero-content_text .text-motto,
+    .hero-content_text .text-title,
+    .hero-content_text .text-body {
+        margin-top: 1rem;
+        padding: .2rem;
+        font-size: 90%;
+        max-width: 100vw;
+        margin-block: auto;
+        text-align: center;
+    }
+    .hero-content_text {
+        align-self: start;
+        margin-block: 0;
+        padding-block: 0;
+    }
+    .hero-content_text .text-motto {
+        font-size: 60%;
+    }
+    .hero-content_text .text-body {
+        width: 100%;
+        margin-inline: auto;
+    }
+    
+
+
+    /* Images */
+    .hero-content_cards {
+        margin-block: 3rem;
+    }
+    .cards .cards-main img.person-1 { margin-top: 1.5rem; }
+    .cards .cards-main img.person-2 { margin-top: 1.5rem; }
+    .cards .cards-main img.person-1,
+    .cards .cards-main img.person-2 {
+        height: 90%;
+    }
+    .overlay-1 {
+        top: -2rem;
+        left: -.5rem;
+        height: 90%;
+    }
+    .overlay-2 {
+        top: 0rem;
+        right: -.5rem;
+        height: 90%;
+    }
+    .cards .cards-main .rays {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .cards .cards-main img.rays-2 {
+        position: absolute;
+        bottom: -.75rem;
+        left: -10px;
+    }
+
+
+    /* Social Media Icons */
+    .hero-content_social {
+        width: 100%;
+        padding-block: 3rem;
+    }
+    .hero-content_social .social-connect {
+        padding-block: 0;
+        flex-direction: row;
+        margin-inline: auto;
+    }
+    .hero-content_social .social-connect img {
+        width: 80%;
+        margin-inline: .95rem;
+    }
+    .hero-content_social .red-line {
+
+        width: 100%;
+        height: 1px;
+        padding: 0;
+        margin-inline: auto;
+        background-color: red;
+    }
 }

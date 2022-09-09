@@ -17,3 +17,22 @@
 .brand-card img {
     height: 30%;
 }
+
+@media screen and ( max-width: 900px ) {
+
+    .brand-card {
+        display: flex;
+        position: unset;
+        box-shadow: none;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .brand-card img {
+        height: 50%;
+        display: block;
+        margin-top: 1rem;
+        margin-inline: auto;
+    }
+}

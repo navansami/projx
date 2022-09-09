@@ -20,3 +20,10 @@
     color: #F6F6F6;
     background-color: var(--clr-pri); 
 }
+
+@media screen and ( max-width: 900px ) {
+    .btn {
+        margin-inline: auto;
+    }
+
+}

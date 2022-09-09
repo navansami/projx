@@ -26,7 +26,7 @@
   border-bottom: .2rem solid var(--clr-pri);
 }
 
-@media screen and ( max-width: 900px ) {
+@media screen and ( max-width: 600px ) {
   .nav {
     width: 100vw;
     display: grid;

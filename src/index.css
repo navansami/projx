@@ -17,20 +17,20 @@
 
 }
 
-
-* {
+*,
+*::after, 
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-snap-align: center;
   scroll-behavior: smooth;
+  scroll-snap-align: center;
 }
 
 body {
   line-height: 1.4;
   font-family: var(--ff-pri);
 }
-
 
 /* Utilities */
 .text-accent {

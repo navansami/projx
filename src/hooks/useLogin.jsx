@@ -1,5 +1,8 @@
-import { useContext } from "react";
-import { LoginContext } from "../context/LoginContext";
+import { useContext } from "react"
+
+// Components
+import { LoginContext } from "../context/LoginContext"
+
 
 export const useLogin = () => {
     const context = useContext(LoginContext);

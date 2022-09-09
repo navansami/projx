@@ -8,7 +8,7 @@ const Login = () => {
     return(
         <div className="login">
             <LoginForm />
-            <LoginSplit />
+            <LoginSplit />  {/* Presentational Component Only */}
         </div>
     )
 }

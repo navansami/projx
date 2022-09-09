@@ -17,7 +17,7 @@ const LoginForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        loginUser( {email, password}, "https://challenge.testing-room.com/api/v1/auth/login/" )
+        loginUser( {email, password} )
         setEmail(""); setPassword("");
     }
 

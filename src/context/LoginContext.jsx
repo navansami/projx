@@ -1,8 +1,10 @@
-import { createContext, useReducer } from 'react';
-import axios from 'axios';
+import { createContext, useReducer } from 'react'
 
-export const LoginContext = createContext();
+// Components
+import { apiDoLogin } from '../apis/jcLoginAPI'
 
+
+export const LoginContext = createContext()
 
 const LoginReducer = (state, action) => {
     switch(action.type) {
@@ -48,14 +50,15 @@ export function LoginProvider({ children }) {
         localStorage.setItem("refreshtoken", JSON.stringify(refresh));
     }
 
-
-    const loginUser = async (user, endpoint) => {
+    // Login using try/catch with axios
+    const loginUser = async ( user ) => {
         try {
-            const res = await axios.post(endpoint, user);
+            const res = await apiDoLogin.post( '/api/v1/auth/login/', user );
             const data = await res;
-            
+
+            // structured payload
             const payload = { data: data.data, email: user.email, password: user.password }
-            
+
             setTokensToLS( data.data.access_token, data.data.refresh_token )
             dispatch({ type:"LOGIN_USER", payload })
 
@@ -66,7 +69,7 @@ export function LoginProvider({ children }) {
         }     
     }
 
-
+    // Incase of any errors dispatched to error state
     const resetLoginErrors = () => {        
         dispatch({ type: "RESET_ERRORS", payload: null })
     }

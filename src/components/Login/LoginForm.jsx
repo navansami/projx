@@ -23,9 +23,7 @@ const LoginForm = () => {
 
     // reset errors to null after 3 seconds
     useEffect(() => {
-        if(errors) {
-            setTimeout(() => resetLoginErrors(), 3000)
-        }
+        if(errors) setTimeout(() => resetLoginErrors(), 3000)
         // eslint-disable-next-line
     }, [errors])
 

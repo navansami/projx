@@ -1,25 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 
 // Components
-import { useLogin } from '../../hooks/useLogin';
+import { useLogin } from '../../hooks/useLogin'
+import Button from '../General/Button'
 
 // Styles
 import '../../css/login.css'
+
 
 const LoginForm = () => {
     const 
         [ email, setEmail ] = useState(""),
         [ password, setPassword ] = useState(""),
-        { loginUser, errors, resetLoginErrors } = useLogin();
+        { loginUser, errors, resetLoginErrors } = useLogin()
 
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        loginUser( {email, password}, 
-            "https://challenge.testing-room.com/api/v1/auth/login/" );
+        e.preventDefault()
+        loginUser( {email, password}, "https://challenge.testing-room.com/api/v1/auth/login/" )
         setEmail(""); setPassword("");
     }
 
+    // reset errors to null after 3 seconds
     useEffect(() => {
         if(errors) {
             setTimeout(() => resetLoginErrors(), 3000)
@@ -42,7 +44,7 @@ const LoginForm = () => {
             </div>
 
 
-
+            {/* hidden div for notifying on errors */}
             {
                 errors && (<div className='error-message'>
                     <p>{ errors }</p>
@@ -54,10 +56,11 @@ const LoginForm = () => {
                     <label htmlFor="userEmail">Email Address</label>
                     <input 
                         type="text" 
-                        name="userEmail" 
-                        id="userEmail" 
-                        placeholder="Email Address"
                         value={email}
+                        id="userEmail" 
+                        name="userEmail" 
+                        autoComplete="off"
+                        placeholder="Email Address"
                         onChange={e => setEmail(e.target.value)}
                     />
                 </div>
@@ -66,10 +69,10 @@ const LoginForm = () => {
                     <label htmlFor="userEmail">Password</label>
                     <input 
                         type="password" 
-                        name="userPassword" 
-                        id="userPassword" 
-                        placeholder="Password"
                         value={password}
+                        id="userPassword" 
+                        name="userPassword" 
+                        placeholder="Password"
                         onChange={e => setPassword(e.target.value)}
                     />
                     <p className="text-forgot">
@@ -78,9 +81,11 @@ const LoginForm = () => {
                 </div>
                 
                 <div className="field">
-                    <button className="btn btn-block">
-                        Login
-                    </button>
+                    <Button 
+                        text={'Login'} 
+                        customize={'btn btn-block'} 
+                        mode={'btn-primary'}  
+                    />
                     <p className='text-noaccount'>Don't have an account? <span className="text-signup text-accent">Sign up</span></p>
                 </div>
             </form>

@@ -1,6 +1,6 @@
 
 .login {
-    width: 100vw;
+    width:  var(--ff-width);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -66,6 +66,10 @@
     justify-content: space-around;
     border-top: 1px solid #E6E7EB;
 }
+.login-footer a:any-link {
+    color: #B4B6C4;
+    text-decoration: underline;
+}
 
 /* Login - Text */
 
@@ -130,4 +134,60 @@
     font-size: 1rem;
     margin-top: 1rem;
     font-weight: 500;
+}
+
+.error-message {
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.error-message p {
+    padding: 1rem;
+    color: #f6f6f6;
+    margin-inline: auto;
+    background-color: #CF0303;
+}
+
+
+@media screen and ( max-width: 900px ) {
+    .login {
+        width: var(--ff-width);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .login-form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .login-header-text p {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .login-footer {
+        font-size: .8rem;
+    }
+
+    .login-present {
+        width:  var(--ff-width);
+        padding-block: 2rem;
+    }
+    .login-present > img {
+        width: 15rem;
+    }
+    .login-present .login-text h1 {
+        font-size: 1.2rem;
+        width:  var(--ff-width);
+    }
+    .login-present .login-text p {
+        font-size: 1rem;
+        width: var(--ff-width);
+    }
 }

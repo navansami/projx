@@ -1,18 +1,18 @@
 .business {
-    width: 100%;
     height: 100vh;
     display: flex;
     margin-inline: 0;
     padding-inline: 0;
     padding-block: 2rem;
     align-items: center;
+    width: var(--ff-width);
     box-sizing: border-box;
     font-family: var(--ff-pri);
     justify-content: flex-start;
 }
 
 .business .business-title {
-    /* width: 40%; */
+    width: 40%;
     padding: 2rem;
     display: inline-flex;
     justify-content: center;

@@ -12,6 +12,9 @@
   --clr-light: #F6F6F6;
   --clr-hightlight: #FED70A;
 
+  /* Metrics */
+  --ff-width: calc(100vw - scrollbarwidthpx);
+
 }
 
 
@@ -19,6 +22,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-snap-align: center;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.4;
+  font-family: var(--ff-pri);
 }
 
 

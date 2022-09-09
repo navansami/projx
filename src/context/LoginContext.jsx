@@ -13,6 +13,16 @@ const LoginReducer = (state, action) => {
                 password: action.payload.password,
                 token: action.payload.data.access_token 
             }
+        case "LOGIN_ERROR":
+            return {
+                ...state,
+                errors: action.payload
+            }
+        case "RESET_ERRORS": 
+            return {
+                ...state,
+                errors: action.payload
+            }
         default:
             return state
     }
@@ -28,7 +38,8 @@ export function LoginProvider({ children }) {
     const [state, dispatch] = useReducer(LoginReducer, {
         token: token,
         email: "",
-        password: ""
+        password: "",
+        errors: null
     })
 
     // set localstorage asynchronously in loginUser() 
@@ -39,21 +50,31 @@ export function LoginProvider({ children }) {
 
 
     const loginUser = async (user, endpoint) => {
+        try {
+            const res = await axios.post(endpoint, user);
+            const data = await res;
+            
+            const payload = { data: data.data, email: user.email, password: user.password }
+            
+            setTokensToLS( data.data.access_token, data.data.refresh_token )
+            dispatch({ type:"LOGIN_USER", payload })
 
-        const res = await axios.post(endpoint, user);
-        const data = await res;
+        } catch (error) {
+            if(error.code === "ERR_BAD_REQUEST") {
+                dispatch ({ type:"LOGIN_ERROR", payload: "Login Failed...Please check Username/Password" })
+            }
+        }     
+    }
 
-        if(data) setTokensToLS( data.data.access_token, data.data.refresh_token )
 
-        const payload = { data: data.data, email: user.email, password: user.password }
-        
-        dispatch({ type:"LOGIN_USER", payload })
+    const resetLoginErrors = () => {        
+        dispatch({ type: "RESET_ERRORS", payload: null })
     }
 
 
     return (
         <LoginContext.Provider value={{
-            ...state, loginUser
+            ...state, loginUser, resetLoginErrors
         }}>
             { children }
         </LoginContext.Provider>

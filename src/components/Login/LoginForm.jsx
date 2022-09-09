@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Components
 import { useLogin } from '../../hooks/useLogin';
@@ -10,7 +10,8 @@ const LoginForm = () => {
     const 
         [ email, setEmail ] = useState(""),
         [ password, setPassword ] = useState(""),
-        { loginUser } = useLogin();
+        { loginUser, errors, resetLoginErrors } = useLogin();
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,6 +19,14 @@ const LoginForm = () => {
             "https://challenge.testing-room.com/api/v1/auth/login/" );
         setEmail(""); setPassword("");
     }
+
+    useEffect(() => {
+        if(errors) {
+            setTimeout(() => resetLoginErrors(), 3000)
+        }
+        // eslint-disable-next-line
+    }, [errors])
+
 
     return (
         <div className="login-form">
@@ -31,6 +40,14 @@ const LoginForm = () => {
                    <span className="text-slogan text-accent">Log in</span> now and start customizing your activities on our platform
                 </p>
             </div>
+
+
+
+            {
+                errors && (<div className='error-message'>
+                    <p>{ errors }</p>
+                </div>)
+            } 
 
             <form className="form" onSubmit={handleSubmit}>
                 <div className="field">

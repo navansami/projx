@@ -43,10 +43,10 @@ const Business = () => {
                 <img src={'images/business/line.png'} alt="line" className='line' />
             </div>
             <div className="business-col1">
-                <BusinessCards cardDetails={businessDetailsColOne} key={businessDetailsColOne._id} />
+                <BusinessCards cardDetails={businessDetailsColOne} />
             </div>
             <div className="business-col2">
-                <BusinessCards cardDetails={businessDetailsColTwo} key={businessDetailsColTwo._id} />
+                <BusinessCards cardDetails={businessDetailsColTwo} />
             </div>
             <div className="dots-right">
             <img src={'images/business/dots-right.png'} alt="layered dots" />

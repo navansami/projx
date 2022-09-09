@@ -246,3 +246,42 @@
         background-color: red;
     }
 }
+
+@media screen and ( max-width: 1250px ) {
+    .hero-content_text .text-motto,
+    .hero-content_text .text-title,
+    .hero-content_text .text-body {
+        margin-top: 1rem;
+        padding: .2rem;
+        font-size: 85%;
+        margin-block: auto;
+    }
+
+
+    
+    /* Images */
+    .overlay-1 {
+        top: -1rem;
+        left: -.5rem;
+        width: 70%;
+        height: 65%;
+    }
+    .overlay-2 {
+        top: 4rem;
+        left: 1.5rem;
+        width: 70%;
+        height: 65%;
+    }
+    .cards .cards-main .rays {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .cards .cards-main img.rays-1 {
+        top: .5rem;
+        left: 15rem;
+    }
+    .cards .cards-main img.rays-2 {
+        top: 23rem;
+        left: -1rem;
+    }   
+}

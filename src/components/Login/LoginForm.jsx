@@ -50,6 +50,8 @@ const LoginForm = () => {
             } 
 
             <form className="form" onSubmit={handleSubmit}>
+                
+                {/* Field One - Email Address */}
                 <div className="field">
                     <label htmlFor="userEmail">Email Address</label>
                     <input 
@@ -63,6 +65,7 @@ const LoginForm = () => {
                     />
                 </div>
                 
+                {/* Field Two - Password with 'forgot password' option */}
                 <div className="field"> 
                     <label htmlFor="userEmail">Password</label>
                     <input 
@@ -78,6 +81,7 @@ const LoginForm = () => {
                     </p>
                 </div>
                 
+                {/* Field Three - Login Button with Sign Up prompt */}
                 <div className="field">
                     <Button 
                         text={'Login'} 

@@ -9,9 +9,10 @@ import { useLogin } from './hooks/useLogin';
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 
+
 const App = () => {
 
-  let { token } = useLogin()
+  const { token } = useLogin()
   const navigate = useNavigate();
 
   // programatically redirect according to token
@@ -32,13 +33,6 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/login' element={<Login />}  />
-          {/* <Route path={'/signout'} element={
-              <Navigate to={'/login'} element={
-                  <>{ // Routes serves to "sign out" the user
-                      window.localStorage.clear()
-                  }</>
-              } />   
-          } /> */}
       </Routes>
 
   </div>

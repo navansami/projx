@@ -1,0 +1,85 @@
+.business {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin-inline: 0;
+    padding-inline: 0;
+    padding-block: 2rem;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: var(--ff-pri);
+    justify-content: flex-start;
+}
+
+.business .business-title {
+    /* width: 40%; */
+    padding: 2rem;
+    display: inline-flex;
+    justify-content: center;
+}
+.business .business-title h1 {
+    display: inline;
+    font-size: 2.25rem;
+}
+.business .business-title img.line {
+    display: inline;
+    height: .2rem;
+    margin-left: 1rem;
+    align-self: center;
+}
+
+.business .dots-left {
+    margin-top: 12rem;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+.business .dots-right {
+    margin-bottom: 6rem;
+    margin-left: auto;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.business-col2 {
+    margin-top: 2rem;
+}
+
+.business-cards {
+    padding: 1rem;
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--clr-light);
+}
+.business-cards .bc-icon {
+    padding: .5rem;
+    background-color: #ffffff;
+}
+.business-cards .bc-icon img {
+    width: 2rem;
+    height: 2rem;
+}
+.business-cards .bc-text {
+    display: flex;
+    margin-left: .5rem;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.business-cards .bc-text .count {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+@media screen and ( max-width: 900px ) {
+    .business {
+        margin-top: 15rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .business .business-title {
+        display: flex;
+        flex-direction: column;
+    }
+}

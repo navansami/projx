@@ -9,6 +9,7 @@
     background-color: var(--clr-pri);
 }
 .btn-block { 
+    color: #F6F6F6;
     width: 100%; 
 }
 .btn-rounded {
@@ -25,5 +26,4 @@
     .btn {
         margin-inline: auto;
     }
-
 }
